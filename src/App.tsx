@@ -57,7 +57,7 @@ const Thought: React.FC<{ text: string; index: number }> = ({
           isBlur,
         [blur]: isBlur,
       })}
-      style={{ filter: blur }}
+      {...(isBlur && { style: { filter: blur } })}
     >
       {text}
     </p>
